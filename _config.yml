@@ -1,4 +1,5 @@
 theme: jekyll-theme-minimal
 title: Java to Kotlin
 show_downloads: false
-is_user_page: false
+github:
+  is_user_page: false

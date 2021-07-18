@@ -1,5 +1,4 @@
 theme: jekyll-theme-minimal
 title: Java to Kotlin
-description: A Refactoring Guidebook
 show_downloads: false
-
+is_user_page: false

@@ -1,5 +1,6 @@
 theme: jekyll-theme-minimal
 title: Java to Kotlin
+logo: book-cover-small.jpeg
 description: About the Book
 show_downloads: false
 github:

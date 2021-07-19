@@ -19,3 +19,5 @@ The [worked example code can be checked out from GitHub](https://github.com/java
 ## Discuss
 
 Follow us on [Twitter](https://twitter.com/java_to_kotlin).
+
+Review on [Good Reads](https://www.goodreads.com/book/show/58153478-java-to-kotlin).

@@ -2,7 +2,7 @@
 
 By Duncan McGregor and Nat Pryce
 
-Preview on the [O'Reilly platform](https://www.oreilly.com/library/view/java-to-kotlin/9781492082262/).
+Read the early access version on the [O'Reilly platform](https://www.oreilly.com/library/view/java-to-kotlin/9781492082262/).
 
 Or preorder from
 [Amazon UK](https://www.amazon.co.uk/Java-Kotlin-Refactoring-Duncan-McGregor/dp/1492082279), 

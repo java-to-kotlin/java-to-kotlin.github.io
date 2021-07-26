@@ -17,21 +17,12 @@
         <h1 class="title"><a href="{{ "/" | absolute_url }}">{{ site.title }}</a></h1>
         <h2 class="subtitle"><a href="{{ "/" | absolute_url }}">{{ site.subtitle }}</a></h2>
 
-        {% if site.logo %}
-        <img src="{{site.logo | relative_url}}" alt="The book's cover" />
-        {% endif %}
-
-        <p>{{ site.description | default: site.github.project_tagline }}</p>
+        <img src="{{site.logo | relative_url}}" alt="{{ site.title }}: {{ site.subtitle }}" />
     </header>
     <section>
-
         {{ content }}
-
     </section>
     <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
     </footer>
 </div>

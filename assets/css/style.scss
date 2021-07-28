@@ -10,3 +10,12 @@ a:hover, a:focus {
 .title, .subtitle {
   font-weight: normal;
 }
+
+nav ul {
+  margin-top: 1em;
+  padding-left: 0;
+}
+
+nav li {
+  display: block;
+}

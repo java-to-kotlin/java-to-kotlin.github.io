@@ -1,4 +1,17 @@
-## Read
+
+> "Nat and Duncan open the book by saying they wish this book had existed when they adopted Kotlin. 
+> I completely agree. The book takes their experiences, their trials and errors, and helps you, the reader, to be on the right path. 
+> It definitely is a book that should be on anyone’s shelf coming to Kotlin from the JVM ecosystem. 
+> An enjoyable read, and an even better reference guide!"
+> —Hadi Hariri, JetBrains Developer Advocate and Host of the [Talking Kotlin](https://talkingkotlin.com/) Podcast.
+
+> "To take familiar good old Java code and see it transform, incrementally, into concise, clear, expressive and easy to maintain Kotlin code is a wonderful way to learn the language. Benefit from the experience McGregor and Pryce have distilled in this book." 
+> —Dr. Venkat Subramaniam, 
+> Award-Winning Author and Founder of Agile Developer, Inc
+
+> "The fastest way to upgrade your skills from Java to Kotlin. Essential reading for any professional Java developer."
+> —Dawn Griffiths & David Griffiths,
+> Authors of Head First Kotlin
 
 Read the early access version on the [O'Reilly platform](https://www.oreilly.com/library/view/java-to-kotlin/9781492082262/).
 
@@ -10,14 +23,3 @@ Or preorder from
 [WH Smiths](https://www.whsmith.co.uk/products/java-to-kotlin-a-refactoring-guidebook/duncan-mcgregor/nat-pryce/paperback/9781492082279.html),
 and other reputable sellers.
 
-
-## Try
-
-The [worked example code can be checked out from GitHub](https://github.com/java-to-kotlin/code).
-
-
-## Discuss
-
-Follow us on [Twitter](https://twitter.com/java_to_kotlin).
-
-Review on [Good Reads](https://www.goodreads.com/book/show/58153478-java-to-kotlin).

@@ -5,15 +5,15 @@ The reference is immediately after the code, like this:
 
 ![Code reference example](coderef.png)
 
-If you are reading this on a device, the reference is a link that will take you to that version of the file on GitHub.
+When you read the book on a device, the reference is a link to that version of the file on GitHub.
 
-On real paper, you can click all you like; nothing will happen, sorry.
-But you can reconstitute the link as follows.
+If reading the book on paper,  you can reconstitute the link as follows...
+
 Take the reference text, in this case:
 
 `table-reader.1:src/test/java/travelator/tablereader/TableReaderAcceptanceTests.kt`
 
-replace the `:` separator with a `/` and add to the root URL `https://github.com/java-to-kotlin/code/blob/` to get:
+Replace the `:` separator with a `/` and add to the root URL `https://github.com/java-to-kotlin/code/blob/` to get:
 
 `https://github.com/java-to-kotlin/code/blob/table-reader.1/src/test/java/travelator/tablereader/TableReaderAcceptanceTests.kt`
 

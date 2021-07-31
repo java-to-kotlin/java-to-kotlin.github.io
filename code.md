@@ -9,15 +9,15 @@ When you read the book on a device, the reference is a link to that version of t
 
 If reading the book on paper,  you can reconstitute the link as follows...
 
-Take the reference text, in this case:
+* Take the reference text, in this case:
 
-`table-reader.1:src/test/java/travelator/tablereader/TableReaderAcceptanceTests.kt`
+    `table-reader.1:src/test/java/travelator/tablereader/TableReaderAcceptanceTests.kt`
 
-Replace the `:` separator with a `/` and add to the root URL `https://github.com/java-to-kotlin/code/blob/` to get:
+* Replace the `:` separator with a `/` and add to the root URL `https://github.com/java-to-kotlin/code/blob/` to get:
 
-`https://github.com/java-to-kotlin/code/blob/table-reader.1/src/test/java/travelator/tablereader/TableReaderAcceptanceTests.kt`
+    `https://github.com/java-to-kotlin/code/blob/table-reader.1/src/test/java/travelator/tablereader/TableReaderAcceptanceTests.kt`
 
-Open this URL in a web browser and it will take you to the same place as the electronic version.
+* Open this URL in a web browser. It will take you to the same place as the link in the electronic version.
 
 In Git, the different code examples (these sometimes span multiple chapters) evolve in separate branches (in this case a branch named "table-reader"), and the steps are tagged (`table-reader.1` is the tag in this case).
 The GitHub link is to code with that tag, so you can view that file and the others in the example at that version.

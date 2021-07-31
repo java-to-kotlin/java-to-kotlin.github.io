@@ -1,0 +1,119 @@
+<section>
+    <h2> Code Links</h2>
+
+    <p>This tool converts references in the code examples to links into GitHub.</p>
+
+    <div id="converter">
+        <label for="coderef">Code Reference: </label>
+        <input id="coderef"
+               type="text"
+               oninput="generateLinks()"
+               autofocus="autofocus"
+               size="80"
+               pattern="^(?<tagName>(?<branch>[a-z][-a-z]*[a-z])\.(?<step>[0-9]+)):(?<file>.+)$"
+        />
+
+        <div class="results" style="visibility: hidden">
+            <p class="filelink"><a href="">Source file <span class="file"></span>
+                at tag <span class="thistag"></span></a></p>
+            <p class="difflink"><a href="">Change from <span class="prevtag"></span>
+                to <span class="thistag"></span></a></p>
+        </div>
+    </div>
+
+    <script>
+        "use strict";
+
+        let codeRefPattern = RegExp(document.getElementById("coderef").pattern)
+        let codeRepo = "https://github.com/java-to-kotlin/code";
+
+        function initialise() {
+            let input = document.getElementById("coderef");
+            input.value = document.location.hash.replace(/^#/, "");
+            generateLinks();
+        }
+
+        function generateLinks() {
+            let input = document.getElementById("coderef");
+            let codeRefStr = input.value;
+            let codeRef = parseCodeRef(codeRefStr);
+
+            if (codeRef != null) {
+                let thisTag = codeRef.tag;
+                let prevTag = prevTagRef(thisTag);
+
+                console.log("parsed codeRef", codeRef);
+
+                document.querySelectorAll(".results").forEach(e => {
+                    e.style.visibility = "visible";
+                });
+                document.querySelectorAll(".results .filelink a").forEach(e => {
+                    e.href = fileUrl(codeRef);
+                });
+                document.querySelectorAll(".results .thistag").forEach(e => {
+                    e.textContent = thisTag.tagName
+                })
+                document.querySelectorAll(".results .file").forEach(e => {
+                    e.textContent = codeRef.file
+                })
+
+                if (prevTag !== null) {
+                    document.querySelectorAll(".results .difflink a").forEach(e => {
+                        e.href = diffUrl(prevTag, thisTag);
+                    });
+                    document.querySelectorAll(".results .prevtag").forEach(e => {
+                        e.textContent = prevTag.tagName
+                    })
+                    document.querySelectorAll(".results .difflink").forEach(e => {
+                        e.style.visibility = "visible"
+                    });
+                } else {
+                    document.querySelectorAll(".results .difflink").forEach(e => {
+                        e.style.visibility = "hidden"
+                    });
+                }
+
+                document.location.hash = codeRefStr;
+
+            } else {
+                console.log("could not parse coderef: " + codeRefStr);
+                document.querySelectorAll(".results").forEach(e => {
+                    e.style.visibility = "hidden";
+                });
+                document.location.hash = "";
+            }
+        }
+
+        function diffUrl(prevTag, nextTag) {
+            return `${codeRepo}/compare/${prevTag.tagName}..${nextTag.tagName}?diff=split`;
+        }
+
+        function fileUrl(codeRef) {
+            return `${codeRepo}/blob/${codeRef.tag.tagName}/${codeRef.file}`
+        }
+
+        function prevTagRef(tagRef) {
+            if (tagRef.step > 0) {
+                let branch = tagRef.branch;
+                let step = tagRef.step - 1;
+                let tagName = `${tagRef.branch}.${step}`;
+                return {tagName, branch, step};
+            } else {
+                return null;
+            }
+        }
+
+        function parseCodeRef(codeRefStr) {
+            let match = codeRefStr.match(codeRefPattern);
+            if (match === null) return null;
+
+            let {tagName, branch, file} = match.groups;
+            let step = parseInt(match.groups.step);
+            if (isNaN(step)) return null;
+
+            return {tag: {tagName, branch, step}, file};
+        }
+
+        initialise();
+    </script>
+</section>

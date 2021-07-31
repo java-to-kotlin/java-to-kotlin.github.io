@@ -6,3 +6,5 @@ description: Supplementary resources
 show_downloads: false
 github:
   is_user_page: false
+exclude:
+  - .idea

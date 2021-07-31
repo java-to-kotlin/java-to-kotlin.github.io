@@ -1,13 +1,14 @@
 ## Example Code
 
 Most of the code examples in the book (the ones in the refactoring sequences) can be accessed online on GitHub.
-The reference is immediately after the code, like this:
+
+Each step in a refactoring sequence is has a reference immediately after the code, like this:
 
 ![Code reference example](coderef.png)
 
 When you read the book on a device, the reference is a link to that version of the file on GitHub.
 
-If reading the book on paper,  you can reconstitute the link as follows...
+When reading the book on paper,  you can turn the reference into a link as follows...
 
 * Take the reference text, in this case:
 

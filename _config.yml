@@ -8,3 +8,8 @@ github:
   is_user_page: false
 exclude:
   - .idea
+  - CNAME
+  - Dockerfile
+  - Gemfile
+  - README.md
+  - .gitignore

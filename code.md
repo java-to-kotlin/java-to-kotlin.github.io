@@ -20,9 +20,10 @@ If reading the book on paper,  you can turn the reference into a link as follows
 
 * Open this URL in a web browser. It will take you to the same place as the link in the electronic version.
 
-In Git, the different code examples (these sometimes span multiple chapters) evolve in separate branches (in this case a branch named "operators"), and the steps are tagged (`operators.6` is the tag in this case).
+In Git, the different code examples evolve in separate branches. In this case, the branch is named "operators". Each step in the example is tagged. In this case, the  tag is named "operators.6".
 The GitHub link is to code with that tag, so you can view that file and the others in the example at that version.
-You can also select other tags to see the different versions, and different branches to see different examples.
+
+In the GitHub web app, you can also select other tags to see the different versions, compare tags to see how the code changes with each step, and switch between branches to see different examples.
 
 For quicker navigation and easier comparison of tags, we recommend that you clone the repository to your local machine, open it in IntelliJ, and use IntelliJ's Git log panel to step through the history.
 

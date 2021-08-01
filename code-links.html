@@ -14,7 +14,7 @@ title: Code Links
                oninput="generateLinks()"
                autofocus="autofocus"
                size="80"
-               pattern="^(?<tagName>(?<branch>[a-z][-a-z]*[a-z])\.(?<step>[0-9]+)):(?<file>.+)$"
+               pattern="^(?<tagName>(?<branch>[a-z][-a-z]*[a-z])\.(?<step>0|([1-9][0-9]*))):(?<file>.+)$"
         />
 
         <nav class="results" style="visibility: hidden">
@@ -38,6 +38,10 @@ title: Code Links
             generateLinks();
         }
 
+        function update(selector, block) {
+            document.querySelectorAll(selector).forEach(e => block(e));
+        }
+
         function generateLinks() {
             let input = document.getElementById("coderef");
             let codeRefStr = input.value;
@@ -49,45 +53,50 @@ title: Code Links
 
                 console.log("parsed codeRef", codeRef);
 
-                document.querySelectorAll(".results").forEach(e => {
+                update(".results", e => {
                     e.style.visibility = "visible";
                 });
-                document.querySelectorAll(".results .filelink a").forEach(e => {
+                update(".results .filelink a", e => {
                     e.href = fileUrl(codeRef);
                 });
-                document.querySelectorAll(".results .thistag").forEach(e => {
+                update(".results .thistag", e => {
                     e.textContent = thisTag.tagName
-                })
-                document.querySelectorAll(".results .file").forEach(e => {
+                });
+                update(".results .file", e => {
                     e.textContent = codeRef.file
-                })
+                });
 
                 if (prevTag !== null) {
-                    document.querySelectorAll(".results .difflink a").forEach(e => {
+                    update(".results .difflink a", e => {
                         e.href = diffUrl(prevTag, thisTag);
                     });
-                    document.querySelectorAll(".results .prevtag").forEach(e => {
+                    update(".results .prevtag", e => {
                         e.textContent = prevTag.tagName
                     })
-                    document.querySelectorAll(".results .difflink").forEach(e => {
+                    update(".results .difflink", e => {
                         e.style.visibility = "visible"
                     });
                 } else {
-                    document.querySelectorAll(".results .difflink").forEach(e => {
+                    update(".results .difflink", e => {
                         e.style.visibility = "hidden"
                     });
                 }
 
                 let search = new URLSearchParams();
                 search.set("ref", codeRefStr);
+
                 window.history.replaceState(null, null, "?" + search.toString());
 
             } else {
                 console.log("could not parse coderef: " + codeRefStr);
-                document.querySelectorAll(".results").forEach(e => {
+                update(".results", e => {
                     e.style.visibility = "hidden";
                 });
-                document.location.hash = "";
+                update(".results .difflink", e => {
+                    e.style.visibility = null;
+                });
+
+                window.history.replaceState(null, null, "?");
             }
         }
 

@@ -16,7 +16,7 @@ If reading the book on paper,  you can turn the reference into a link as follows
 
 * Replace the `:` separator with a `/` and add to the root URL `https://github.com/java-to-kotlin/code/blob/` to get:
 
-    `https://github.com/java-to-kotlin/code/blob/operators.6/src/main/java/travelator/money/Money.kt`
+    [`https://github.com/java-to-kotlin/code/blob/operators.6/src/main/java/travelator/money/Money.kt`](https://github.com/java-to-kotlin/code/blob/operators.6/src/main/java/travelator/money/Money.kt)
 
 * Open this URL in a web browser. It will take you to the same place as the link in the electronic version.
 

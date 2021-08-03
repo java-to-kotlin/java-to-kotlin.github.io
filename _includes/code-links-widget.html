@@ -26,15 +26,16 @@
             let exampleId = query.get("ref") || "";
             let codeRef = examples[exampleId];
 
-            if (codeRef !== null) {
+            if (codeRef) {
+                let input = document.getElementById("coderef");
+                input.value = exampleId;
+
                 let showType = query.get("show");
                 if (showType === "diff" && codeRef.previousVersion !== null) {
                     window.location = diffUrl(codeRef);
                 } else if (showType === "file") {
                     window.location = fileUrl(codeRef);
                 } else {
-                    let input = document.getElementById("coderef");
-                    input.value = exampleId;
                     generateLinks();
                 }
             }

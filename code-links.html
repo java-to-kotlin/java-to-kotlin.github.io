@@ -11,19 +11,17 @@ title: Code Links
         <label for="coderef">Example Number: </label>
         <input id="coderef"
                type="text"
-               placeholder="Chapter#.Step#. For example: 4.2"
+               placeholder="E.g. 3.7"
                oninput="generateLinks()"
                autofocus="autofocus"
-               size="80"
+               size="8"
                pattern="^[1-9][0-9]*\\.[1-9][0-9]*)$"
         />
-
-        <nav class="results" style="visibility: hidden">
-            <p class="filelink"><a href="">Source file <span class="file"></span>
-                at tag <span class="thistag"></span></a></p>
-            <p class="difflink"><a href="">Changes between <span class="prevtag"></span>
-                and <span class="thistag"></span></a></p>
-        </nav>
+        <span class="results" style="visibility: hidden;">
+            <span class="filelink"><a href="">Source file</a></span>
+            |
+            <span class="difflink"><a href="">Diff</a></span>
+        </span>
     </div>
     <script>
         let examples = {% include examples.json %};
@@ -72,7 +70,7 @@ title: Code Links
                     e.textContent = codeRef.version;
                 });
                 update(".results .file", e => {
-                    e.textContent = codeRef.file
+                    e.textContent = codeRef.path
                 });
 
                 if (codeRef.previousVersion !== null) {

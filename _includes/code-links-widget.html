@@ -1,18 +1,20 @@
 <div id="converter">
-    <label>Example Number:
-        <input id="coderef"
-               type="text"
-               placeholder="E.g. 3.7"
-               oninput="generateLinks()"
-               autofocus="autofocus"
-               size="8"
-               pattern="^[1-9][0-9]*\\.[1-9][0-9]*)$"
-        />
-    </label>
-    <span class="results" style="display: none;">
+    <p>
+        <label>Example Number:
+            <input id="coderef"
+                   type="text"
+                   placeholder="E.g. 3.7"
+                   oninput="generateLinks()"
+                   autofocus="autofocus"
+                   size="8"
+                   pattern="^[1-9][0-9]*\\.[1-9][0-9]*)$"
+            />
+        </label>
+        <span class="results" style="display: none;">
             <span class="filelink"><a href="">Source file</a></span><span class="difflink">,
             <a href="">Diff</a></span>
         </span>
+    </p>
     <script>
         let examples = {% include code-index.json %};
     </script>

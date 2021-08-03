@@ -8,15 +8,16 @@ title: Code Links
     <p>This tool converts references in the code examples to links into GitHub.</p>
 
     <div id="converter">
-        <label for="coderef">Example Number: </label>
-        <input id="coderef"
-               type="text"
-               placeholder="E.g. 3.7"
-               oninput="generateLinks()"
-               autofocus="autofocus"
-               size="8"
-               pattern="^[1-9][0-9]*\\.[1-9][0-9]*)$"
-        />
+        <label>Example Number:
+            <input id="coderef"
+                   type="text"
+                   placeholder="E.g. 3.7"
+                   oninput="generateLinks()"
+                   autofocus="autofocus"
+                   size="8"
+                   pattern="^[1-9][0-9]*\\.[1-9][0-9]*)$"
+            />
+        </label>
         <span class="results" style="visibility: hidden;">
             <span class="filelink"><a href="">Source file</a></span>
             |
@@ -24,7 +25,10 @@ title: Code Links
         </span>
     </div>
     <script>
-        let examples = {% include examples.json %};
+        let examples = { % include
+        examples.json %
+        }
+        ;
     </script>
     <script>
         "use strict";

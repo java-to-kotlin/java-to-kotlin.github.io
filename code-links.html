@@ -97,10 +97,10 @@ title: Code Links
                 console.log("no example: " + exampleId);
 
                 update(".results", e => {
-                    e.style.visibility = "hidden";
+                    e.style.display = "none";
                 });
                 update(".results .difflink", e => {
-                    e.style.visibility = null;
+                    e.style.display = "none";
                 });
 
                 window.history.replaceState(null, null, "?");

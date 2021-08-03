@@ -8,13 +8,14 @@ title: Code Links
     <p>This tool converts references in the code examples to links into GitHub.</p>
 
     <div id="converter">
-        <label for="coderef">Code Reference: </label>
+        <label for="coderef">Example Number: </label>
         <input id="coderef"
                type="text"
+               placeholder="Chapter#.Step#. For example: 4.2"
                oninput="generateLinks()"
                autofocus="autofocus"
                size="80"
-               pattern="^(?<tagName>(?<branch>[a-z][-a-z]*[a-z])\.(?<step>0|([1-9][0-9]*))):(?<file>.+)$"
+               pattern="^[1-9][0-9]*\\.[1-9][0-9]*)$"
         />
 
         <nav class="results" style="visibility: hidden">
@@ -24,18 +25,31 @@ title: Code Links
                 and <span class="thistag"></span></a></p>
         </nav>
     </div>
-
+    <script>
+        let examples = {% include examples.json %};
+    </script>
     <script>
         "use strict";
 
-        let codeRefPattern = RegExp(document.getElementById("coderef").pattern)
         let codeRepo = "https://github.com/java-to-kotlin/code";
 
         function initialise() {
-            let input = document.getElementById("coderef");
             let query = new URLSearchParams(document.location.search);
-            input.value = query.get("ref");
-            generateLinks();
+            let exampleId = query.get("ref") || "";
+            let codeRef = examples[exampleId];
+
+            if (codeRef !== null) {
+                let showType = query.get("show");
+                if (showType === "diff" && codeRef.previousVersion !== null) {
+                    window.location = diffUrl(codeRef);
+                } else if (showType === "file") {
+                    window.location = fileUrl(codeRef);
+                } else {
+                    let input = document.getElementById("coderef");
+                    input.value = exampleId;
+                    generateLinks();
+                }
+            }
         }
 
         function update(selector, block) {
@@ -44,15 +58,10 @@ title: Code Links
 
         function generateLinks() {
             let input = document.getElementById("coderef");
-            let codeRefStr = input.value;
-            let codeRef = parseCodeRef(codeRefStr);
+            let exampleId = input.value;
+            let codeRef = examples[exampleId];
 
-            if (codeRef != null) {
-                let thisTag = codeRef.tag;
-                let prevTag = prevTagRef(thisTag);
-
-                console.log("parsed codeRef", codeRef);
-
+            if (codeRef !== null) {
                 update(".results", e => {
                     e.style.visibility = "visible";
                 });
@@ -60,18 +69,18 @@ title: Code Links
                     e.href = fileUrl(codeRef);
                 });
                 update(".results .thistag", e => {
-                    e.textContent = thisTag.tagName
+                    e.textContent = codeRef.version;
                 });
                 update(".results .file", e => {
                     e.textContent = codeRef.file
                 });
 
-                if (prevTag !== null) {
+                if (codeRef.previousVersion !== null) {
                     update(".results .difflink a", e => {
-                        e.href = diffUrl(prevTag, thisTag);
+                        e.href = diffUrl(codeRef);
                     });
                     update(".results .prevtag", e => {
-                        e.textContent = prevTag.tagName
+                        e.textContent = codeRef.previousVersion;
                     })
                     update(".results .difflink", e => {
                         e.style.visibility = "visible"
@@ -83,12 +92,12 @@ title: Code Links
                 }
 
                 let search = new URLSearchParams();
-                search.set("ref", codeRefStr);
-
+                search.set("ref", exampleId);
                 window.history.replaceState(null, null, "?" + search.toString());
 
             } else {
-                console.log("could not parse coderef: " + codeRefStr);
+                console.log("no example: " + exampleId);
+
                 update(".results", e => {
                     e.style.visibility = "hidden";
                 });
@@ -100,34 +109,12 @@ title: Code Links
             }
         }
 
-        function diffUrl(prevTag, nextTag) {
-            return `${codeRepo}/compare/${prevTag.tagName}..${nextTag.tagName}?diff=split`;
+        function diffUrl(codeRef) {
+            return `${codeRepo}/compare/${codeRef.previousVersion}..${codeRef.version}?diff=split`;
         }
 
         function fileUrl(codeRef) {
-            return `${codeRepo}/blob/${codeRef.tag.tagName}/${codeRef.file}`
-        }
-
-        function prevTagRef(tagRef) {
-            if (tagRef.step > 0) {
-                let branch = tagRef.branch;
-                let step = tagRef.step - 1;
-                let tagName = `${tagRef.branch}.${step}`;
-                return {tagName, branch, step};
-            } else {
-                return null;
-            }
-        }
-
-        function parseCodeRef(codeRefStr) {
-            let match = codeRefStr.match(codeRefPattern);
-            if (match === null) return null;
-
-            let {tagName, branch, file} = match.groups;
-            let step = parseInt(match.groups.step);
-            if (isNaN(step)) return null;
-
-            return {tag: {tagName, branch, step}, file};
+            return `${codeRepo}/blob/${codeRef.version}/${codeRef.path}`
         }
 
         initialise();

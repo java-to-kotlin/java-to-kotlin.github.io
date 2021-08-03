@@ -1,0 +1,110 @@
+<div id="converter">
+    <label>Example Number:
+        <input id="coderef"
+               type="text"
+               placeholder="E.g. 3.7"
+               oninput="generateLinks()"
+               autofocus="autofocus"
+               size="8"
+               pattern="^[1-9][0-9]*\\.[1-9][0-9]*)$"
+        />
+    </label>
+    <span class="results" style="display: none;">
+            <span class="filelink"><a href="">Source file</a></span><span class="difflink">,
+            <a href="">Diff</a></span>
+        </span>
+    <script>
+        let examples = {% include code-index.json %};
+    </script>
+    <script>
+        "use strict";
+
+        let codeRepo = "https://github.com/java-to-kotlin/code";
+
+        function initialise() {
+            let query = new URLSearchParams(document.location.search);
+            let exampleId = query.get("ref") || "";
+            let codeRef = examples[exampleId];
+
+            if (codeRef !== null) {
+                let showType = query.get("show");
+                if (showType === "diff" && codeRef.previousVersion !== null) {
+                    window.location = diffUrl(codeRef);
+                } else if (showType === "file") {
+                    window.location = fileUrl(codeRef);
+                } else {
+                    let input = document.getElementById("coderef");
+                    input.value = exampleId;
+                    generateLinks();
+                }
+            }
+        }
+
+        function update(selector, block) {
+            document.querySelectorAll(selector).forEach(e => block(e));
+        }
+
+        function generateLinks() {
+            let input = document.getElementById("coderef");
+            let exampleId = input.value;
+            let codeRef = examples[exampleId];
+
+            if (codeRef !== null) {
+                update(".results", e => {
+                    e.style.display = "inline";
+                });
+                update(".results .filelink a", e => {
+                    e.href = fileUrl(codeRef);
+                });
+                update(".results .thistag", e => {
+                    e.textContent = codeRef.version;
+                });
+                update(".results .file", e => {
+                    e.textContent = codeRef.path
+                });
+
+                if (codeRef.previousVersion !== null) {
+                    update(".results .difflink a", e => {
+                        e.href = diffUrl(codeRef);
+                    });
+                    update(".results .prevtag", e => {
+                        e.textContent = codeRef.previousVersion;
+                    })
+                    update(".results .difflink", e => {
+                        e.style.display = "inline"
+                    });
+                } else {
+                    update(".results .difflink", e => {
+                        e.style.display = "none"
+                    });
+                }
+
+                let search = new URLSearchParams();
+                search.set("ref", exampleId);
+                window.history.replaceState(null, null, "?" + search.toString());
+
+            } else {
+                console.log("no example: " + exampleId);
+
+                update(".results", e => {
+                    e.style.display = "none";
+                });
+                update(".results .difflink", e => {
+                    e.style.display = "none";
+                });
+
+                window.history.replaceState(null, null, "?");
+            }
+        }
+
+        function diffUrl(codeRef) {
+            return `${codeRepo}/compare/${codeRef.previousVersion}..${codeRef.version}?diff=split`;
+        }
+
+        function fileUrl(codeRef) {
+            return `${codeRepo}/blob/${codeRef.version}/${codeRef.path}`
+        }
+
+        initialise();
+    </script>
+</div>

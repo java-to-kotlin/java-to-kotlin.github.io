@@ -18,9 +18,8 @@ title: Code Links
                    pattern="^[1-9][0-9]*\\.[1-9][0-9]*)$"
             />
         </label>
-        <span class="results" style="visibility: hidden;">
-            <span class="filelink"><a href="">Source file</a></span>
-            |
+        <span class="results" style="display: none;">
+            <span class="filelink"><a href="">Source file</a></span>,
             <span class="difflink"><a href="">Diff</a></span>
         </span>
     </div>
@@ -62,7 +61,7 @@ title: Code Links
 
             if (codeRef !== null) {
                 update(".results", e => {
-                    e.style.visibility = "visible";
+                    e.style.display = "inline";
                 });
                 update(".results .filelink a", e => {
                     e.href = fileUrl(codeRef);
@@ -82,11 +81,11 @@ title: Code Links
                         e.textContent = codeRef.previousVersion;
                     })
                     update(".results .difflink", e => {
-                        e.style.visibility = "visible"
+                        e.style.display = "inline"
                     });
                 } else {
                     update(".results .difflink", e => {
-                        e.style.visibility = "hidden"
+                        e.style.display = "none"
                     });
                 }
 

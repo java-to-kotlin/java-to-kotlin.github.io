@@ -1,26 +1,18 @@
 ## Example Code
 
+{% include code-links-widget.html %}
+
 The examples refactoring sequences in the book are hosted in [a public GitHub repository](https://github.com/java-to-kotlin/code).
 
 In the book, each step in a refactoring sequence has a reference immediately after the code, like this:
 
 ![Code reference example](coderef.png)
 
-In electronic formats, the reference is a link to that version of the file on GitHub.
+In electronic formats, the reference links to the version of the file on GitHub, and the change between that version of the code and the previous version.
 
-If reading the book on paper,  you can turn the reference into a link as follows...
+If reading the book on paper,  you can turn the reference into links by entering the example number in the input box above.
 
-* Take the reference text, in this case:
-
-    `operators.6:src/main/java/travelator/money/Money.kt`
-
-* Replace the `:` separator with a `/` and add to the root URL `https://github.com/java-to-kotlin/code/blob/` to get:
-
-    [`https://github.com/java-to-kotlin/code/blob/operators.6/src/main/java/travelator/money/Money.kt`](https://github.com/java-to-kotlin/code/blob/operators.6/src/main/java/travelator/money/Money.kt)
-
-* Open this URL in a web browser. It will take you to the same place as the link in the electronic version.
-
-In Git, the different code examples evolve in separate branches. In this case, the branch is named "operators". Each step in the example is tagged. In this case, the  tag is named "operators.6".
+In the Git repository, the different code examples evolve in separate branches. In this case, the branch is named "operators". Each step in the example is tagged. In this case, the  tag is named "operators.6".
 The GitHub link is to code with that tag, so you can view that file and the others in the example at that version.
 
 In the GitHub web app, you can also select other tags to see the different versions, compare tags to see how the code changes with each step, and switch between branches to see different examples.

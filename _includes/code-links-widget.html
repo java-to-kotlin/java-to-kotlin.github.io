@@ -49,7 +49,7 @@
             let exampleId = input.value;
             let codeRef = examples[exampleId];
 
-            if (codeRef !== null) {
+            if (codeRef) {
                 update(".results", e => {
                     e.style.display = "inline";
                 });
@@ -63,7 +63,7 @@
                     e.textContent = codeRef.path
                 });
 
-                if (codeRef.previousVersion !== null) {
+                if (codeRef.previousVersion) {
                     update(".results .difflink a", e => {
                         e.href = diffUrl(codeRef);
                     });

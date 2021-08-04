@@ -5,9 +5,10 @@
                    type="text"
                    placeholder="E.g. 3.7"
                    oninput="generateLinks()"
+                   onsubmit="onSubmit()"
                    autofocus="autofocus"
                    size="8"
-                   pattern="^[1-9][0-9]*\\.[1-9][0-9]*)$"
+                   pattern="^[1-9][0-9]*\\.[1-9][0-9]*$"
             />
         </label>
         <span class="results" style="display: none;">
@@ -23,6 +24,15 @@
 
         let codeRepo = "https://github.com/java-to-kotlin/code";
 
+        function onSubmit() {
+            let input = document.getElementById("coderef");
+            let exampleId = input.value;
+            let codeRef = examples[exampleId];
+            if (codeRef) {
+                loadFile(codeRef);
+            }
+        }
+
         function initialise() {
             let query = new URLSearchParams(document.location.search);
             let exampleId = query.get("ref") || "";
@@ -33,14 +43,22 @@
                 input.value = exampleId;
 
                 let showType = query.get("show");
-                if (showType === "diff" && codeRef.previousVersion !== null) {
-                    window.location = diffUrl(codeRef);
-                } else if (showType === "file") {
-                    window.location = fileUrl(codeRef);
+                if (showType === "file") {
+                    loadFile(codeRef);
+                } else if (showType === "diff" && codeRef.previousVersion !== null) {
+                    loadDiff(codeRef);
                 } else {
                     generateLinks();
                 }
             }
+        }
+
+        function loadDiff(codeRef) {
+            window.location = diffUrl(codeRef);
+        }
+
+        function loadFile(codeRef) {
+            window.location = fileUrl(codeRef);
         }
 
         function update(selector, block) {

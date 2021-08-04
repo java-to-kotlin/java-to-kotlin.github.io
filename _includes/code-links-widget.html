@@ -5,7 +5,7 @@
                    type="text"
                    placeholder="E.g. 3.7"
                    oninput="generateLinks()"
-                   onsubmit="onSubmit()"
+                   onchange="tryLoadFile()"
                    autofocus="autofocus"
                    size="8"
                    pattern="^[1-9][0-9]*\\.[1-9][0-9]*$"
@@ -24,7 +24,7 @@
 
         let codeRepo = "https://github.com/java-to-kotlin/code";
 
-        function onSubmit() {
+        function tryLoadFile() {
             let input = document.getElementById("coderef");
             let exampleId = input.value;
             let codeRef = examples[exampleId];

@@ -14,10 +14,9 @@
 <body>
 <div class="wrapper">
     <header>
-        <img src="{{site.logo | relative_url}}"
-             alt="{{ site.title }}: {{ site.subtitle }}"
-             title="{{ site.title }}: {{ site.subtitle }}"/>
-
+        <a href="{% link index.md %}"><img src="{{site.logo | relative_url}}"
+                         alt="{{ site.title }}: {{ site.subtitle }}"
+                         title="{{ site.title }}: {{ site.subtitle }}"/></a>
         <nav>
             <ul>
                 <li><a href="{% link code.md %}">Example code</a></li>
@@ -35,7 +34,8 @@
         {{ content }}
     </section>
     <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a
+                href="https://github.com/orderedlist">orderedlist</a></small></p>
     </footer>
 </div>
 <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>

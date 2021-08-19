@@ -20,8 +20,9 @@ We've gone to print! You can preorder a physical copy from
 [Amazon US](https://www.amazon.com/Java-Kotlin-Refactoring-Duncan-McGregor/dp/1492082279), 
 [Barnes and Noble](https://www.barnesandnoble.com/w/java-to-kotlin-duncan-mcgregor/1139044173?ean=9781492082279),
 [Waterstones](https://www.waterstones.com/book/java-to-kotlin/duncan-mcgregor/nat-pryce/9781492082279),
-[WH Smiths](https://www.whsmith.co.uk/products/java-to-kotlin-a-refactoring-guidebook/duncan-mcgregor/nat-pryce/paperback/9781492082279.html),
-and other reputable sellers, it should be available by the end of August.
+[Foyles](https://www.foyles.co.uk/witem/computing-it/java-to-kotlin-a-refactoring-guidebook,duncan-mcgregor-nat-pryce-9781492082279),
+and other reputable sellers. 
+It should be available by the end of August.
 
 Can't wait? Buy the e-book version right now from 
 * [Amazon UK](https://www.amazon.co.uk/Java-Kotlin-Duncan-McGregor-ebook-dp-B09CT5KZLM/dp/B09CT5KZLM/)

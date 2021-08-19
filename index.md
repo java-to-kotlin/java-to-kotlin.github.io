@@ -28,5 +28,7 @@ Can't wait? Buy the e-book version right now from
 * [Amazon US](https://www.amazon.com/Java-Kotlin-Duncan-McGregor-ebook-dp-B09CT5KZLM/dp/B09CT5KZLM/)
 * [Apple Books](https://books.apple.com/gb/book/java-to-kotlin/id1581503494)
 * [Google Play Books](https://play.google.com/store/books/details/Duncan_McGregor_Java_to_Kotlin?id=6d09EAAAQBAJ)
+* [eBooks.com](https://www.ebooks.com/en-us/book/210356108/java-to-kotlin/duncan-mcgregor/)
+* [O'Reilly](https://shop.aer.io/oreilly/p/java-to-kotlin/9781492082279-9149)
 
 or access online on the [O'Reilly platform](https://www.oreilly.com/library/view/java-to-kotlin/9781492082262/).

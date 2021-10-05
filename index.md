@@ -15,16 +15,15 @@
 > —Dr. Venkat Subramaniam, 
 > Award-Winning Author and Founder of Agile Developer, Inc
 
-We've gone to print! You can preorder a physical copy from 
+We've gone to print! Actual books are available from
 [Amazon UK](https://www.amazon.co.uk/Java-Kotlin-Refactoring-Duncan-McGregor/dp/1492082279), 
 [Amazon US](https://www.amazon.com/Java-Kotlin-Refactoring-Duncan-McGregor/dp/1492082279), 
 [Barnes and Noble](https://www.barnesandnoble.com/w/java-to-kotlin-duncan-mcgregor/1139044173?ean=9781492082279),
 [Waterstones](https://www.waterstones.com/book/java-to-kotlin/duncan-mcgregor/nat-pryce/9781492082279),
 [Foyles](https://www.foyles.co.uk/witem/computing-it/java-to-kotlin-a-refactoring-guidebook,duncan-mcgregor-nat-pryce-9781492082279),
 and other reputable sellers. 
-It should be available by the end of August.
 
-Can't wait? Buy the e-book version right now from 
+Can't wait for delivery? Buy the e-book version right now from 
 * [Amazon UK](https://www.amazon.co.uk/Java-Kotlin-Duncan-McGregor-ebook-dp-B09CT5KZLM/dp/B09CT5KZLM/)
 * [Amazon US](https://www.amazon.com/Java-Kotlin-Duncan-McGregor-ebook-dp-B09CT5KZLM/dp/B09CT5KZLM/)
 * [Apple Books](https://books.apple.com/gb/book/java-to-kotlin/id1581503494)

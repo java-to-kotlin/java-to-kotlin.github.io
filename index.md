@@ -33,6 +33,4 @@ Can't wait for delivery? Buy the e-book version right now from
 
 or access online on the [O'Reilly platform](https://www.oreilly.com/library/view/java-to-kotlin/9781492082262/).
 
-The authors hang out on the Kotlin language Slack.  
-You can find them in the [#java-to-kotlin-refactoring](https://kotlinlang.slack.com/archives/C02GZL8HJHY) channel.
-You can sign up to the Kotlin language Slack at https://kotl.in/slack.
+The authors hang out on the Kotlin language Slack. You can find them in the [#java-to-kotlin-refactoring](https://kotlinlang.slack.com/archives/C02GZL8HJHY) channel.

@@ -34,3 +34,9 @@ Can't wait for delivery? Buy the e-book version right now from
 or access online on the [O'Reilly platform](https://www.oreilly.com/library/view/java-to-kotlin/9781492082262/).
 
 The authors hang out on the Kotlin language Slack. You can find them in the [#java-to-kotlin-refactoring](https://kotlinlang.slack.com/archives/C02GZL8HJHY) channel.
+
+Duncan has written about the tools used to write the book on [his blog](http://oneeyedmen.com/book-software-part-1.html).
+
+We've been interviewed for the Talking Kotlin podcast - you can watch it on [YouTube](https://www.youtube.com/watch?v=YGmBTQMGUhA).
+
+

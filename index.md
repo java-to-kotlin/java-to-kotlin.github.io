@@ -39,6 +39,6 @@ Duncan has written about the tools used to write the book on [his blog](http://o
 
 We've been interviewed for the Talking Kotlin podcast - you can watch it on [YouTube](https://www.youtube.com/watch?v=YGmBTQMGUhA).
 
-See this video converting the [Gilded Rose Kata from Java to Kotlin](https://www.youtube.com/watch?v=rpGGTT7IuCs).
+Also on YouTube, a series converting the [Gilded Rose Kata from Java to Kotlin](https://youtube.com/playlist?list=PL1ssMPpyqocjo6kkNCg-ncTyAW0nECPmq).
 
 

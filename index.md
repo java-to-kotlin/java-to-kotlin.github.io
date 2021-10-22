@@ -15,6 +15,8 @@
 > —Dr. Venkat Subramaniam, 
 > Award-Winning Author and Founder of Agile Developer, Inc
 
+[More reviews](reviews.html)
+
 We've gone to print! Actual books are available from
 [Amazon UK](https://www.amazon.co.uk/Java-Kotlin-Refactoring-Duncan-McGregor/dp/1492082279), 
 [Amazon US](https://www.amazon.com/Java-Kotlin-Refactoring-Duncan-McGregor/dp/1492082279), 

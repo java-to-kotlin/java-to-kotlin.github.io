@@ -16,11 +16,11 @@ Use rbenv to install the required version of Ruby:
 
     rbenv install
 
-Install bundler
+Install bundler into the version of Ruby of the local rbenv:
 
     gem install bundler
 
-Install dependencies
+Install dependencies into the version of Ruby of the local rbenv:
 
     bundle install
 

@@ -13,39 +13,16 @@
 </head>
 <body>
 <div class="wrapper">
-    <header>
-        <a href="{% link index.md %}"><img src="{{site.logo | relative_url}}"
-                         alt="{{ site.title }}: {{ site.subtitle }}"
-                         title="{{ site.title }}: {{ site.subtitle }}"/></a>
-        <nav>
-            <ul>
-                <li><a href="{% link reviews.md %}">Reviews</a></li>
-                <li><a href="{% link code.md %}">Example code</a></li>
-                <li><a href="https://www.oreilly.com/catalog/errata.csp?isbn=0636920453178">Errata</a></li>
-            </ul>
-        </nav>
-        
-        <nav>
-            <ul>
-                <li><a href="https://twitter.com/java_to_kotlin">Follow us on Twitter</a></li>
-                <li><a href="https://www.goodreads.com/book/show/58153478-java-to-kotlin">Review on Good Reads</a></li>
-            </ul>
-        </nav>
-
-        <nav>
-            <ul>
-                <li><a href="https://kotlinlang.slack.com/archives/C02GZL8HJHY">Discuss in the #java-to-kotlin-refactoring Slack channel</a></li>
-            </ul>
-        </nav>
-    </header>
+    {% include nav.html %}
     <section>
         {{ content }}
     </section>
     <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a
-                href="https://github.com/orderedlist">orderedlist</a></small></p>
+        <p><small>Hosted on GitHub Pages.
+            Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
     </footer>
 </div>
+
 <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
 </body>
 </html>

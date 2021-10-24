@@ -1,0 +1,14 @@
+#!/bin/bash
+set -euo pipefail
+
+f="_drafts/$(echo -n $@ | tr -s [:space:] - | tr [:upper:] [:lower:]).md"
+
+mkdir -p "$(dirname "$f")"
+echo "---
+layout: post
+title: $@
+tags:
+---" > "$f"
+
+git add "$f"
+"${VISUAL:-${EDITOR:-idea}}" "$f"

@@ -1,0 +1,10 @@
+#!/bin/bash
+set -euo pipefail
+
+draft="${1:?draft file}"
+draftfile="$(echo "$draft" | sed -e 's:^_drafts/::g')"
+categorydir="$(dirname "$draftfile")"
+post="_posts/$categorydir/$(date +%Y-%m-%d)-$(basename "$draft")"
+
+mv "$draft" "$post"
+echo published as "$post"

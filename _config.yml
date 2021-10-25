@@ -15,5 +15,6 @@ exclude:
   - .gitignore
   - site-*
 plugins:
+  - jekyll-asciidoc
   - jekyll-feed
   - jekyll-sitemap

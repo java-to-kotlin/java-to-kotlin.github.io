@@ -1,4 +1,4 @@
-## Example Code
+# Example Code
 
 {% include code-links-widget.html %}
 

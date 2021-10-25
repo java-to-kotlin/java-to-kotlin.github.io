@@ -1,6 +1,7 @@
 ---
-layout: default
+page-layout: default
 ---
+
 == An Asciidoc file
 
 Hello from asciidoc

@@ -18,3 +18,5 @@ plugins:
   - jekyll-asciidoc
   - jekyll-feed
   - jekyll-sitemap
+asciidoc: {}
+asciidoctor: {}

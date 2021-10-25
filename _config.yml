@@ -16,3 +16,4 @@ exclude:
   - site-*
 plugins:
   - jekyll-feed
+  - jekyll-sitemap

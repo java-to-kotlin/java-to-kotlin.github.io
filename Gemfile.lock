@@ -274,6 +274,7 @@ DEPENDENCIES
   github-pages
   jekyll
   jekyll-feed
+  jekyll-sitemap
 
 BUNDLED WITH
    2.2.29

@@ -1,0 +1,17 @@
+---
+layout: default
+title: Futher Journeys
+---
+<h1>{{page.title}}</h1>
+
+<p>
+Here we collect refactoring journeys beyond those described in the book.
+Some didn't make it into the book because of time and space constraints,
+others describe how to use features added to the language since the book went to print.
+</p>
+
+<ul>
+{% for j in site.journeys  %}
+<li><a href="{{j.url}}">{{j.title}}</a></li>
+{% endfor %}
+</ul>

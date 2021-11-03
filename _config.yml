@@ -14,8 +14,13 @@ exclude:
   - README.md
   - .gitignore
   - site-*
+  - code-examples
 plugins:
   - jekyll-feed
   - jekyll-sitemap
 asciidoc: {}
 asciidoctor: {}
+collections:
+  journeys:
+    output: true
+    layout: default

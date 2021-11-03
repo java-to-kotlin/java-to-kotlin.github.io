@@ -8,6 +8,9 @@
             <li><a href="{% link reviews.md %}">Reviews</a></li>
             <li><a href="{% link code.md %}">Example code</a></li>
             <li><a href="https://www.oreilly.com/catalog/errata.csp?isbn=0636920453178">Errata</a></li>
+            {% if site.journeys.size > 0 %}
+            <li><a href="{% link journeys.html %}">Further journeys</a></li>
+            {% endif %}
         </ul>
     </nav>
 

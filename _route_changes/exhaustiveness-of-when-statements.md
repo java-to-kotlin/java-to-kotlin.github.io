@@ -1,7 +1,7 @@
 ---
 title: Exhaustiveness of When Statements 
 layout: default 
-published: false
+published: true
 ---
 # {{page.title}}
 

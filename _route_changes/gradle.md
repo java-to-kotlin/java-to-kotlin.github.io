@@ -1,7 +1,7 @@
 ---
 title: Gradle Build Rules
-published: false
 layout: default
+published: true
 ---
 # {{page.title}}
 

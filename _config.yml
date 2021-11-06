@@ -21,6 +21,9 @@ plugins:
 asciidoc: {}
 asciidoctor: {}
 collections:
+  route_changes:
+    output: true
+    layout: default
   journeys:
     output: true
     layout: default

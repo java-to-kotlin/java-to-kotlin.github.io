@@ -1,0 +1,20 @@
+---
+title: Route Changes
+layout: default
+---
+<h1>{{page.title}}</h1>
+
+<p>
+    When we wrote the book, the latest Kotlin version was 1.4.
+    Kotlin 1.5 was released just as we went to print.
+    At the time I'm writing this page, Kotlin 1.6 is imminent.
+    The underlying design principles we describe in the book do not depend on the version of the language (or even on
+    Kotlin itself). However, the details of some code examples and refactoring sequences will become outdated as the
+    language and tooling evolves. Here we document those differences.
+</p>
+
+<ul>
+    {% for j in site.route_changes %}
+    <li><a href="{{j.url}}">{{j.title}}</a></li>
+    {% endfor %}
+</ul>

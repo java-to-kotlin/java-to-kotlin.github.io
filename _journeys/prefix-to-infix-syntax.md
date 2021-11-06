@@ -137,7 +137,6 @@ The converter translates the Java class of static methods into a top-level Kotli
 Because we still have Java code calling those static methods, the converter annotates them with @JvmStatic.
 The compiler will generate static methods in the Java bytecode, leaving the Java code unaffected.
 
-// TODO: add callouts
 <!-- begin-insert: tags/jsondsl_mixed.3:src/test/java/colloquiumatic/json/Json.kt#json_dsl -->
 ```kotlin
 object Json {
@@ -174,7 +173,7 @@ object Json {
 }
 ```
 
-// TODO: use callouts here instead of a paragraph of sentences.
+<!-- TODO: use callouts here instead of a paragraph of sentences -->
 At the time of writing, IntelliJ doesn't get the conversion quite right.
 It marks more types as nullable than we would want.
 It  doesn't infer nullability correctly, so the converted code doesn't compile.
@@ -182,7 +181,6 @@ It doesn't annotate all method overloads with @JvmStatic, so Java code that depe
 
 Happily it's easy to fix: we can remove the spurious nullability modifiers and add the required @JvmStatic annotations:
 
-//TODO add callouts
 <!-- begin-insert: tags/jsondsl_mixed.4:src/test/java/colloquiumatic/json/Json.kt#json_dsl -->
 ```kotlin
 object Json {
@@ -222,7 +220,10 @@ object Json {
 }
 ```
 
+<!-- 
+TODO: use callouts here instead of a paragraph of sentences
 TODO: explain nullability & Jackson's API, the +node.set<JsonNode>+ weirdness, and keeping the @SafeVarargs for Java.
+ -->
 
 ## Simplifying the Kotlin code
 
@@ -333,7 +334,7 @@ Finally, we clean up by inlining the type aliases and the temporary extension pr
 
 That leaves the code looking like:
 
-// TODO: fix the @JvmStatic annotation on the same line
+<!-- TODO: fix the @JvmStatic annotation on the same line -->
 <!-- begin-insert: tags/jsondsl_mixed.8:src/test/java/colloquiumatic/json/Json.kt#json_dsl -->
 ```kotlin
 object Json {

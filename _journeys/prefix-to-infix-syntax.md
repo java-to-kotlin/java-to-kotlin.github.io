@@ -128,9 +128,11 @@ val commandAsJson: JsonNode = obj(
 )
 ```
 
-> ### Tip
-> Unlike Java, Kotlin does not distinguish between imports and "static imports".
-> The Kotlin import statement can import top-level declarations from other packages, static members of Java classes, and members from object declarations.
+****
+### Tip
+
+Unlike Java, Kotlin does not distinguish between imports and "static imports". The Kotlin import statement can import top-level declarations from other packages, static members of Java classes, and members from object declarations.
+****
 
 Eventually enough of the code that uses the `Json` class is Kotlin that it's worth converting the `Json` class itself.
 The converter translates the Java class of static methods into a top-level Kotlin object.

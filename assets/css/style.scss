@@ -9,18 +9,52 @@ body {
   font-weight: 300;
 
   display: grid;
-  grid-template-columns: [l] 18em [mc] 1fr [r];
-  grid-template-rows: [t] auto [mr] auto [b];
-  grid-template-areas:
-    "header article"
-    "footer footer";
-  gap: 1em;
-  padding: 1em;
 
   background: white;
   color: black;
 
   line-height: 140%;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    grid-template-columns: [l] 18em [mc] 1fr [r];
+    grid-template-rows: [t] auto [mr] auto [b];
+    grid-template-areas:
+    "header article"
+    "footer footer";
+    gap: 1em;
+    padding: 1em;
+  }
+
+  header img {
+    width: 80%;
+    filter: drop-shadow(0px 4px 4px #00000044);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    grid-template-columns: [l] 1fr [r];
+    grid-template-rows: [t] auto [ah] auto [hf] auto [b];
+    grid-template-areas:
+    "article"
+    "header"
+    "footer";
+    gap: 1em;
+    padding: 1em;
+  }
+
+  header img {
+    height: 320px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+img {
+  object-fit: contain;
 }
 
 header {
@@ -59,14 +93,6 @@ nav {
   }
 }
 
-header {
-  img {
-    width: 80%;
-    margin-left: 2px;
-    filter: drop-shadow(0px 4px 4px #00000044);
-  }
-}
-
 iframe {
   margin-bottom: 1em;
 }
@@ -91,11 +117,11 @@ a {
   color: #445588;
 
   :visited {
-    color: darken(#445588,10%);
+    color: darken(#445588, 10%);
   }
 
   :hover {
-    color: lighten(#445588,10%);
+    color: lighten(#445588, 10%);
     text-decoration: underline;
   }
 }

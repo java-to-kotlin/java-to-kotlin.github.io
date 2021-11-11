@@ -1,10 +1,45 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import "normalize.css";
+
+body {
+  font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+
+  display: grid;
+  grid-template-columns: [l] 18em [mc] 1fr [r];
+  grid-template-rows: [t] auto [mr] auto [b];
+  grid-template-areas:
+    "header article"
+    "footer footer";
+  gap: 1em;
+  padding: 1em;
+
+  background: white;
+  color: black;
+
+  line-height: 140%;
+}
+
+header {
+  grid-area: header;
+}
+
+article {
+  grid-area: article;
+}
+
+footer {
+  grid-area: footer;
+  background: white;
+  color: black;
+}
 
 a:hover, a:focus {
   font-weight: normal;
+  text-underline: none;
 }
 
 .title, .subtitle {
@@ -13,29 +48,67 @@ a:hover, a:focus {
 
 nav {
   margin-top: 1em;
-}
 
-nav ul {
-  padding-left: 0;
-}
+  ul {
+    padding-left: 0;
+  }
 
-nav li {
-  display: block;
-  margin-bottom: 0.25em;
+  li {
+    display: block;
+    margin-bottom: 0.25em;
+  }
 }
 
 header {
-  background: white;
-}
-
-section {
-  background: white;
-}
-
-footer {
-  z-index: -1;
+  img {
+    width: 80%;
+    margin-left: 2px;
+    filter: drop-shadow(0px 4px 4px #00000044);
+  }
 }
 
 iframe {
   margin-bottom: 1em;
 }
+
+img {
+  display: block;
+  position: static;
+  width: 80%;
+}
+
+h1, h2, h3, h4, h5, h6, title {
+  font-weight: normal;
+  color: darkred;
+}
+
+blockquote {
+  margin-left: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #445588;
+
+  :visited {
+    color: darken(#445588,10%);
+  }
+
+  :hover {
+    color: lighten(#445588,10%);
+    text-decoration: underline;
+  }
+}
+
+article a {
+  font-weight: normal;
+}
+
+@import "rouge.css";
+
+.highlight {
+  font-size: smaller;
+  padding: 0.15em 0.5em;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');

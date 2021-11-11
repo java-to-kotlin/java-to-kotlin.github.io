@@ -13,16 +13,13 @@
     <![endif]-->
 </head>
 <body>
-<div class="wrapper">
-    {% include nav.html %}
-    <section>
-        {{ content }}
-    </section>
-    <footer>
-        <p><small>Hosted on GitHub Pages.
-            Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-    </footer>
-</div>
+{% include nav.html %}
+<article>
+{{ content }}
+</article>
+<footer>
+<p><small>Hosted on GitHub Pages.</small></p>
+</footer>
 
 <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
 </body>

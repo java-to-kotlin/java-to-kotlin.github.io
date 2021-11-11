@@ -5,8 +5,8 @@ published: false
 ---
 # {{page.title}}
 
-Our application contains a utility class of static methods that we use to build examples of JSON data in tests.
-This allows us to write self-contained tests that are not split between Java code and JSON resource files without having to build JSON examples by string concatenation.
+The _Travelator_ application contains a utility class of static methods that we use to build examples of JSON data in tests.
+This allows us to write self-contained tests that are not split between Java code and JSON resource files, and we don't have to build JSON examples in the tests by string concatenation.
 
 To build a JSON tree, we statically import syntactic sugar methods from the `Json` class:
 
@@ -136,6 +136,7 @@ Because we still have Java code calling those static methods, the converter anno
 The compiler will generate static methods in the Java bytecode, leaving the Java code unaffected.
 
 <!-- begin-insert: tags/jsondsl_mixed.3:src/test/java/colloquiumatic/json/Json.kt#json_dsl -->
+
 ```kotlin
 object Json {
     private val nodes = JsonNodeFactory.instance
@@ -180,6 +181,7 @@ It doesn't annotate all method overloads with @JvmStatic, so Java code that depe
 Happily it's easy to fix: we can remove the spurious nullability modifiers and add the required @JvmStatic annotations:
 
 <!-- begin-insert: tags/jsondsl_mixed.4:src/test/java/colloquiumatic/json/Json.kt#json_dsl -->
+
 ```kotlin
 object Json {
     private val nodes = JsonNodeFactory.instance
@@ -237,6 +239,7 @@ Finally, we can replace the call to Java's Arrays.asList with Kotlin's `asList()
 This removes a lot of boilerplate from the class:
 
 <!-- begin-insert: tags/jsondsl_mixed.5:src/test/java/colloquiumatic/json/Json.kt#tidy_implementation -->
+
 ```kotlin
 object Json {
     private val nodes = JsonNodeFactory.instance
@@ -395,6 +398,7 @@ How about "of"?
 That would make Kotlin code that builds JSON look like:
 
 <!-- begin-insert: tags/jsondsl_mixed.12:src/test/java/colloquiumatic/rating/RateSessionCommandParserTest.kt#json_dsl_usage -->
+
 ```kotlin
 val commandAsJson: JsonNode = obj(
     "userId" of exampleUserId,
@@ -408,7 +412,9 @@ val commandAsJson: JsonNode = obj(
 How do we turn a function into an infix function?
 What do we do about the code in Java, which doesn't have the concept of infix functions?
 
-To make a function inline we must first make it an extension function, and then mark it as infix.
+## Making a Function Infix 
+
+To make a function infix, we must first make it an extension function, and then mark it as infix.
 IntelliJ can automatically do the first step: _Alt-Enter_ on the first parameter of each `prop` function and select "Convert parameter to receiver".
 Our JSON-building code then looks like this:
 
@@ -426,7 +432,9 @@ val commandAsJson: JsonNode = obj(
 At the time of writing, IntelliJ cannot automatically refactor an extension function into an infix function.
 We must add the infix modifier to the prop function by hand.
 IntelliJ will then be able to refactor between infix and dotted method call syntax for a single call site, but doesn't automate the refactoring in bulk for _all_ uses of an infix function across the codebase.
-Going through every call site and refactoring them one by one sounds too tedious!
+Going through every call site and refactoring them one by one sounds terribly tedious!
+
+## Second Go
 
 Let's roll back and take another run at it: we'll try using a similar combo of adding code, delegating and inlining that we used to swap out the Map.Entry type for Pair.
 We'll add new, infix functions called "of" and make the "prop" functions delegate to them.
@@ -721,4 +729,4 @@ infix fun String.of(intValue: Int?) =
 
 In this chapter we explored a tiny _Embedded Domain-Specific Language_ that uses nested function calls to compose data structures.  This kind of notation is easy to implement but rather limited in what it can express and construct.
 
-// TODO more here... 
+<!-- TODO more here... --> 

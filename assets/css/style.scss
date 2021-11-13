@@ -21,10 +21,11 @@ body {
 @media screen and (min-width: 800px) {
   body {
     grid-template-columns: [l] 18em [mc] 1fr [r];
-    grid-template-rows: [t] auto [mr] auto [b];
+    grid-template-rows: [t] auto [cn] auto [nf] auto [b];
     grid-template-areas:
-    "header article"
-    "footer footer";
+      "cover article"
+      "nav article"
+      "footer footer";
     gap: 2em;
     padding: 2em;
   }
@@ -40,10 +41,10 @@ body {
     grid-template-columns: [l] 1fr [r];
     grid-template-rows: [t] auto [ah] auto [hf] auto [b];
     grid-template-areas:
-    "article"
-    "header"
-    "footer";
-
+      "cover"
+      "article"
+      "nav"
+      "footer";
     gap: 2em;
     padding: 1em;
   }
@@ -60,8 +61,12 @@ img {
   object-fit: contain;
 }
 
-header {
-  grid-area: header;
+nav {
+  grid-area: nav;
+}
+
+header#cover {
+  grid-area: cover;
 }
 
 article {

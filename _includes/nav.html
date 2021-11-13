@@ -1,37 +1,33 @@
-<header>
+<header id="cover">
     <a href="{% link index.md %}"><img src="{{site.logo | relative_url}}"
                                        alt="{{ site.title }}: {{ site.subtitle }}"
                                        title="{{ site.title }}: {{ site.subtitle }}"/></a>
-    <nav>
-        <h3>Resources</h3>
-        <ul>
-            <li><a href="{% link reviews.md %}">Reviews</a></li>
-            <li><a href="{% link code.md %}">Example code</a></li>
-            <li><a href="https://www.oreilly.com/catalog/errata.csp?isbn=0636920453178">Errata</a></li>
-            {% if site.route_changes.size > 0 %}
-            <li><a href="{% link route-changes.html %}">Route Changes</a></li>
-            {% endif %}
-            {% if site.journeys.size > 0 %}
-            <li><a href="{% link journeys.html %}">Further Journeys</a></li>
-            {% endif %}
-        </ul>
-    </nav>
-
-    <nav>
-        <h3>Recent News Articles</h3>
-        <ul>
-            {% for post in site.posts limit: 5 %}
-            <li><a href="{{post.url}}">{{post.date | date: "%Y-%m-%d"}}. {{post.title}}</a></li>
-            {% endfor %}
-            <li><a href="/news.html">All news articles...</a></li>
-        </ul>
-    </nav>
-
-    <nav>
-        <h3>Discuss</h3>
-        <ul>
-            <li><a href="https://twitter.com/java_to_kotlin">@java_to_kotlin on Twitter</a></li>
-            <li><a href="https://kotlinlang.slack.com/archives/C02GZL8HJHY">#java-to-kotlin-refactoring on Slack</a></li>
-        </ul>
-    </nav>
 </header>
+
+<nav>
+    <h3>Resources</h3>
+    <ul>
+        <li><a href="{% link reviews.md %}">Reviews</a></li>
+        <li><a href="{% link code.md %}">Example code</a></li>
+        <li><a href="https://www.oreilly.com/catalog/errata.csp?isbn=0636920453178">Errata</a></li>
+        {% if site.route_changes.size > 0 %}
+        <li><a href="{% link route-changes.html %}">Route Changes</a></li>
+        {% endif %}
+        {% if site.journeys.size > 0 %}
+        <li><a href="{% link journeys.html %}">Further Journeys</a></li>
+        {% endif %}
+    </ul>
+
+    <h3>Recent News Articles</h3>
+    <ul>
+        {% for post in site.posts limit: 5 %}
+        <li><a href="{{post.url}}">{{post.date | date: "%Y-%m-%d"}}. {{post.title}}</a></li>
+        {% endfor %}
+        <li><a href="/news.html">All news articles...</a></li>
+    </ul>
+    <h3>Discuss</h3>
+    <ul>
+        <li><a href="https://twitter.com/java_to_kotlin">@java_to_kotlin on Twitter</a></li>
+        <li><a href="https://kotlinlang.slack.com/archives/C02GZL8HJHY">#java-to-kotlin-refactoring on Slack</a></li>
+    </ul>
+</nav>

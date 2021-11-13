@@ -3,17 +3,19 @@
 
 @import "normalize.css";
 
+html {
+}
+
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-size: 18px;
   font-weight: 300;
+  line-height: 1.4;
 
   display: grid;
 
   background: white;
   color: black;
-
-  line-height: 140%;
 }
 
 @media screen and (min-width: 800px) {
@@ -23,8 +25,8 @@ body {
     grid-template-areas:
     "header article"
     "footer footer";
-    gap: 1em;
-    padding: 1em;
+    gap: 2em;
+    padding: 2em;
   }
 
   header img {
@@ -41,7 +43,8 @@ body {
     "article"
     "header"
     "footer";
-    gap: 1em;
+
+    gap: 2em;
     padding: 1em;
   }
 
@@ -106,6 +109,7 @@ img {
 h1, h2, h3, h4, h5, h6, title {
   font-weight: normal;
   color: darkred;
+  line-height: 1.2;
 }
 
 blockquote {

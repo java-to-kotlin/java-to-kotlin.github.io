@@ -9,7 +9,7 @@
 > It definitely is  a book that should be on anyone’s shelf coming to Kotlin from the JVM ecosystem. 
 > An enjoyable read, and an even better reference guide!"
 > 
-> —Hadi Hariri, JetBrains developer advocate and host of the [Talking Kotlin](https://talkingkotlin.com/) podcast.
+> —Hadi Hariri, JetBrains developer advocate and host of the [Talking Kotlin podcast](https://talkingkotlin.com/).
 
 > "To take familiar good old Java code and see it transform, incrementally, into concise, clear, expressive and easy to maintain Kotlin code is a wonderful way to learn the language. 
 > Benefit from the experience McGregor and Pryce have distilled in this book."
@@ -44,6 +44,6 @@ and other e-book providers.
 
 ## Other Resources
 
-The authors hang out on the Kotlin language Slack. You can find them in the [#java-to-kotlin-refactoring](https://kotlinlang.slack.com/archives/C02GZL8HJHY) channel.
+The authors hang out on the Kotlin language Slack. You can find them in the [#java-to-kotlin-refactoring channel](https://kotlinlang.slack.com/archives/C02GZL8HJHY).
 
 A video series converting the [Gilded Rose Kata from Java to Kotlin](https://youtube.com/playlist?list=PL1ssMPpyqocjo6kkNCg-ncTyAW0nECPmq).

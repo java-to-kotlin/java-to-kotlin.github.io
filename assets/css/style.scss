@@ -176,6 +176,62 @@ article a {
   font-weight: normal;
 }
 
+// CSS-only carousel, adapted from https://codepen.io/chriscoyier/pen/XwbNwX
+@media screen {
+  .slider {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .slides {
+    display: flex;
+
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+    scrollbar-width: thin;
+    scrollbar-color: #aaaaaa transparent;
+  }
+
+  .slides::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .slides::-webkit-scrollbar-thumb {
+    background: #aaaaaa;
+    border-radius: 8px;
+  }
+
+  .slides::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 100%;
+    height: auto;
+    margin-right: 1em;
+    border-radius: 1em;
+    background: #eee;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// Syntax highlighting
+
 @import "rouge.css";
 
 .highlight {

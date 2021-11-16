@@ -182,6 +182,8 @@ article a {
     width: 80%;
     height: auto;
     overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .slides {
@@ -189,10 +191,11 @@ article a {
 
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-
     scroll-behavior: smooth;
+
     -webkit-overflow-scrolling: touch;
 
+    // Firefox
     scrollbar-width: thin;
     scrollbar-color: #aaaaaa transparent;
   }

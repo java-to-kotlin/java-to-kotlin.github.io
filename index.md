@@ -39,9 +39,10 @@
       </figure>
     </div>
   </div>
+
+  <p><a href="reviews.html" title="Readers' reviews">More reviews...</a></p>
 </div>
 
-[More reviews...](reviews.html)
 
 ## Buy a copy
 

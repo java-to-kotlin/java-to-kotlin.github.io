@@ -40,7 +40,7 @@
     </div>
   </div>
 
-  <p><a href="reviews.html" title="Readers' reviews">More reviews...</a></p>
+  <p><a href="{% link reviews.md %}" title="Readers' reviews">More reviews...</a></p>
 </div>
 
 

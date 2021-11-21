@@ -3,6 +3,32 @@
 
 @import "normalize.css";
 
+%basic_block {
+  display: block;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+}
+
+blockquote {
+  @extend %basic_block;
+}
+
+figure {
+  @extend %basic_block;
+}
+
+$mobile_max_width: 900px;
+
+
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: "Lato", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: 300;
@@ -38,7 +64,7 @@ body {
   }
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: $mobile_max_width) {
   body {
     grid-template-columns: [l] 18em [mc] 1fr [r];
     grid-template-rows: [t] auto [cn] 1fr [nf] auto [b];
@@ -55,7 +81,7 @@ body {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: $mobile_max_width) {
   body {
     grid-template-columns: [l] 1fr [r];
     grid-template-rows: [t] auto [ah] 1fr [hf] auto [b];
@@ -176,62 +202,15 @@ article a {
   font-weight: normal;
 }
 
-// CSS-only carousel, adapted from https://codepen.io/chriscoyier/pen/XwbNwX
-@media screen {
-  .slider {
-    width: 80%;
-    height: auto;
-    overflow: hidden;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .slides {
-    display: flex;
-
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-
-    -webkit-overflow-scrolling: touch;
-
-    // Firefox
-    scrollbar-width: thin;
-    scrollbar-color: #aaaaaa transparent;
-  }
-
-  .slides::-webkit-scrollbar {
-    width: 8px;
-    height: 8px;
-  }
-
-  .slides::-webkit-scrollbar-thumb {
-    background: #aaaaaa;
-    border-radius: 8px;
-  }
-
-  .slides::-webkit-scrollbar-track {
-    background: transparent;
-  }
-
-  .slides > div {
-    scroll-snap-align: start;
-    flex-shrink: 0;
-    width: 100%;
-    height: auto;
-    margin-right: 1em;
-    border-radius: 1em;
-    background: #eee;
-    transform-origin: center center;
-    transform: scale(1);
-    transition: transform 0.5s;
-    position: relative;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+figure {
+  margin-block-start: 1em;
+  margin-block-end: 1em;
 }
+
+figcaption {
+  margin-block-start: 0.5em;
+}
+
 
 // Syntax highlighting
 

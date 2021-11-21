@@ -1,48 +1,39 @@
-<div class="slider">
-  <div class="slides">
-    <div id="slide-1">
-      <figure>
-        <blockquote>
-          The fastest way to upgrade your skills from Java to Kotlin. 
-          Essential reading for any professional Java developer.
-        </blockquote>
-        <figcaption>
-          —Dawn Griffiths & David Griffiths, 
-          authors of Head First Kotlin.
-        </figcaption>
-      </figure>
-    </div>
-    <div id="slide-2">
-      <figure>
-        <blockquote>
-          Nat and Duncan open the book by saying they wish this book had existed when they adopted Kotlin. 
-          I completely agree. The book takes their experiences, their trials and errors, and helps you, the reader, to be on the right path. 
-          It definitely is  a book that should be on anyone’s shelf coming to Kotlin from the JVM ecosystem. 
-          An enjoyable read, and an even better reference guide!
-        </blockquote>
-        <figcaption>
-         —Hadi Hariri, JetBrains developer advocate and host of the 
-         <a href="https://talkingkotlin.com/" title="Talking Kotlin home page">Talking Kotlin podcast</a>.
-        </figcaption>
-      </figure>
-    </div>
-    <div id="slide-3">
-      <figure>
-        <blockquote>
-          To take familiar good old Java code and see it transform, incrementally, into concise, clear, expressive and easy to maintain Kotlin code is a wonderful way to learn the language.
-          Benefit from the experience McGregor and Pryce have distilled in this book.
-        </blockquote>
-        <figcaption>
-          —Dr. Venkat Subramaniam,
-          award-winning author and founder of Agile Developer, Inc.
-        </figcaption>
-      </figure>
-    </div>
-  </div>
+## What People are Saying
 
-  <p><a href="{% link reviews.md %}" title="Readers' reviews">More reviews...</a></p>
-</div>
+<figure>
+  <blockquote>
+    The fastest way to upgrade your skills from Java to Kotlin. 
+    Essential reading for any professional Java developer.
+  </blockquote>
+  <figcaption>
+    —Dawn Griffiths & David Griffiths, 
+    authors of Head First Kotlin.
+  </figcaption>
+</figure>
+<figure>
+  <blockquote>
+    Nat and Duncan open the book by saying they wish this book had existed when they adopted Kotlin. 
+    I completely agree. The book takes their experiences, their trials and errors, and helps you, the reader, to be on the right path. 
+    It definitely is  a book that should be on anyone’s shelf coming to Kotlin from the JVM ecosystem. 
+    An enjoyable read, and an even better reference guide!
+  </blockquote>
+  <figcaption>
+   —Hadi Hariri, JetBrains developer advocate and host of the 
+   <a href="https://talkingkotlin.com/" title="Talking Kotlin home page">Talking Kotlin podcast</a>.
+  </figcaption>
+</figure>
+<figure>
+  <blockquote>
+    To take familiar good old Java code and see it transform, incrementally, into concise, clear, expressive and easy to maintain Kotlin code is a wonderful way to learn the language.
+    Benefit from the experience McGregor and Pryce have distilled in this book.
+  </blockquote>
+  <figcaption>
+    —Dr. Venkat Subramaniam,
+    award-winning author and founder of Agile Developer, Inc.
+  </figcaption>
+</figure>
 
+<p><a href="{% link reviews.md %}" title="Readers' reviews">More reviews...</a></p>
 
 ## Buy a copy
 

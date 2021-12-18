@@ -7,21 +7,22 @@ github:
   is_user_page: false
 exclude:
   - .*
+  - .idea/
   - CNAME
   - Dockerfile
   - Gemfile
   - README.md
   - .gitignore
   - site-*
-  - code-examples
-  - lib
-  - gradle
+  - code-examples/
+  - lib/
+  - gradle/
   - gradle.properties
   - gradlew
   - build.gradle
   - settings.gradle
-  - buildSrc
-  - build
+  - buildSrc/
+  - build/
 plugins:
   - jekyll-feed
   - jekyll-sitemap

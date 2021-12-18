@@ -15,6 +15,13 @@ exclude:
   - site-*
   - code-examples
   - lib
+  - gradle
+  - gradle.properties
+  - gradlew
+  - build.gradle
+  - settings.gradle
+  - buildSrc
+  - build
 plugins:
   - jekyll-feed
   - jekyll-sitemap

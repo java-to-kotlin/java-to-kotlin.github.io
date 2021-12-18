@@ -9,7 +9,7 @@ In Kotlin 1.7, [Kotlin will check both `when` expressions and `when` statements 
 book.
 
 In Kotlin versions up to and including 1.5, The compiler checks `when` expressions for exhaustiveness but does not
-check `when` _statements_. The compiler considers `when` to be a statement if the value of the entire `when` expression
+check when _statements_. The compiler considers when to be a statement if the value of the entire when expression
 is unused. 
 
 For example, if using `when` to handle elements of the following enum:
@@ -45,8 +45,7 @@ val <T> T.exhaustive get() = this
 ```
 <!-- end-insert -->
 
-If you call `exhaustive` on the result of a `when` statement, the compiler considers the `when` to be an expression of
-type `Unit` and checks it for exhaustiveness.
+If you call `exhaustive` on the result of a when statement, the compiler considers the when to be an expression of type `Unit` and checks it for exhaustiveness.
 
 <!-- begin-insert: code-examples/src/main/dev/java_to_kotlin/sealed_when/SealedWhenExamples.kt#force_exhaustive -->
 ```kotlin
@@ -62,11 +61,17 @@ fun walkInDirection(direction: Direction) {
 <!-- end-insert -->
 
 
-In 1.6, a non-exhaustive `when` statements will result in a compile-time warning.  The example above will result in a warning like:
+In Kotlin 1.7 onwards a non-exhaustive when statement will be a compile-time error, and we will not need the `exhaustive` extension any more.  The "Inline property" refactoring will remove it entirely from the codebase.
+
+Meanwhile, in Kotlin 1.6, non-exhaustive when statements will be reported as compile-time warnings.  The example above is reported with the warning:
 
 > Non exhaustive 'when' statements on enum will be prohibited in 1.7, add 'SOUTH' branch or 'else' branch instead
 
-In Kotlin 1.7 onwards that warning will be an error, and we can do away with our `.exhaustive` extension.
+To migrate to 1.7, we can configure IntelliJ to report non-exhaustive when statements as errors.
 
+![Configuring IntelliJ to report non-exhaustive when statements as errors](intellij-non-exhaustive-when-as-error.png)
+
+Compiling in [progressive mode][2] also reports non-exhaustive when statements as errors.
 
 [1]: https://kotlinlang.org/docs/whatsnew1530.html#exhaustive-when-statements-for-sealed-and-boolean-subjects
+[2]: https://kotlinlang.org/docs/whatsnew13.html#progressive-mode

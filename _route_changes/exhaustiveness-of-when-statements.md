@@ -65,9 +65,7 @@ In Kotlin 1.7 onwards a non-exhaustive when statement will be a compile-time err
 
 Meanwhile, in Kotlin 1.6, non-exhaustive when statements will be reported as compile-time warnings.  The example above is reported with the warning:
 
-```
-Non exhaustive 'when' statements on enum will be prohibited in 1.7, add 'SOUTH' branch or 'else' branch instead
-```
+> `Non exhaustive 'when' statements on enum will be prohibited in 1.7, add 'SOUTH' branch or 'else' branch instead`
 
 To migrate to 1.7, we can configure IntelliJ to report non-exhaustive when statements as errors.
 

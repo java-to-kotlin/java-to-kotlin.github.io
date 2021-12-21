@@ -4,7 +4,7 @@ import book.processFiles
 import java.lang.System.getProperty
 
 plugins {
-    kotlin("jvm") version "1.5.20"
+    kotlin("jvm")
 }
 
 dependencies {

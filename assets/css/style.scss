@@ -80,8 +80,8 @@ body {
     padding: 2em;
   }
 
-  header img {
-    width: 80%;
+  #cover img {
+    width: 60%;
   }
 }
 
@@ -98,8 +98,8 @@ body {
     padding: 1em;
   }
 
-  header img {
-    height: 320px;
+  #cover img {
+    height: 280px;
     width: auto;
     margin-left: auto;
     margin-right: auto;
@@ -140,10 +140,6 @@ body {
   }
 }
 
-img {
-  object-fit: contain;
-}
-
 #cover img {
   filter: drop-shadow(0px 4px 4px #00000044);
 }
@@ -175,7 +171,8 @@ iframe {
 img {
   display: block;
   position: static;
-  width: 80%;
+  width: 100%;
+  object-fit: contain;
 }
 
 h1, h2, h3, h4, h5, h6, title {

@@ -83,11 +83,11 @@ private fun lookupWithRoot(
 ) = { key: String ->
     val (codeFile, fragment) = key.parse(roots)
     if (codeFile.exists) {
-        val linkTag = when (codeFile) {
-            is GitFile -> diffTracking.record(codeFile)
-            else -> null
-        }
-        FileSnippet(codeFile, fragment, linkTag, kotlinVersion)
+//        val linkTag = when (codeFile) {
+//            is GitFile -> diffTracking.record(codeFile)
+//            else -> null
+//        }
+        FileSnippet(codeFile, fragment, null, kotlinVersion)
             .rendered()
     } else {
         val message =

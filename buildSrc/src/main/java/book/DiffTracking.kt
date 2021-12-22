@@ -15,11 +15,10 @@ class DiffTracking(
     }
 
     private fun GitFile.toTag(exampleNumber: String): String = """
-        ++++
         <div class="coderef">
-            <a class="orm:hideurl" href="$linkUrl?ref=$exampleNumber&amp;show=file">Example $exampleNumber [$version:$relativePath]</a> <a class="orm:hideurl print-hide" href="$linkUrl?ref=$exampleNumber&amp;show=diff">(diff)</a> 
+            <a href="$linkUrl?ref=$exampleNumber&amp;show=file">Example $exampleNumber [$version:$relativePath]</a> <a href="$linkUrl?ref=$exampleNumber&amp;show=diff">(diff)</a>
         </div>
-        ++++""".trimIndent()
+        """.trimIndent()
 
     fun toJson(): List<String> {
         val previousVersionLookup = mutableMapOf<String, GitFile>()

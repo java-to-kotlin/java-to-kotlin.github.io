@@ -60,5 +60,5 @@ or buy the e-book version from
 The authors hang out on the Kotlin language Slack. You can find them in
 the [#java-to-kotlin-refactoring channel](https://kotlinlang.slack.com/archives/C02GZL8HJHY).
 
-A video series converting
-the [Gilded Rose Kata from Java to Kotlin](https://youtube.com/playlist?list=PL1ssMPpyqocjo6kkNCg-ncTyAW0nECPmq).
+Duncan hosts a [YouTube channel](https://www.youtube.com/c/DuncanMcGregors) with lots of Kotlin content. 
+Check out the [Java to Kotlin](https://youtube.com/playlist?list=PL1ssMPpyqochwd6i5EgLhsY22yK_4Qnhb) playlist.

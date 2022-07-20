@@ -2,9 +2,20 @@
 
 ## On [O'Reilly](https://learning.oreilly.com/library/view/java-to-kotlin/9781492082262/)
 
+
+> ⭐️⭐️⭐️⭐️⭐️
+>
+> This is a great piece for every Java programmer who thinks about trying out Kotlin. It doesn't cover every language feature and is by no means a replacement for the reference documentation, but it is something more important in my opinion. As rarely (if ever) in the real world there is a chance to suddenly migrate your project from one language to another, it is crucial to know how you can do such a thing incrementally and where it may bring the most value for your buck. And this book pretty much gives you just that.
+>
+>I also really liked that the authors put a lot of focus not only on the language itself but also generally on best practices of software development and functional programming especially. The examples are rather simple, but they convey the message pretty well. The text is easy to read and understandable. Overall, I can truly recommend this book.
+>
+> —michal.olejnik on July 11, 2022
+
+
 > ⭐️⭐️⭐️⭐️⭐️
 > 
 > Extremely well written. Gives historical context as to why Kotlin is what it is and how that fixes issues that were accumulated in the Java througout the years. A great intro on how to start with Java to Kotlin conversion on your projects.
+> 
 > —josef.bodnar, October 19, 2021
 
 
@@ -30,6 +41,7 @@
 > 
 > —safarileandrozis, May 15, 2021
 
+
 ## On [Amazon](https://www.amazon.com/Java-Kotlin-Refactoring-Duncan-McGregor-dp-1492082279)
 
 > ⭐️⭐️⭐️⭐️⭐️ A great learning approach, insightful advice to adapting to Kotlin
@@ -42,7 +54,7 @@
 >
 > Highly recommended 
 > 
-> Andrew Farrell Reviewed in the United Kingdom on October 8, 2021
+> —Andrew Farrell Reviewed in the United Kingdom on October 8, 2021
 
 
 > ⭐️⭐️⭐️⭐️⭐️ Valuable
@@ -51,7 +63,7 @@
 > 
 > Highly recommended.
 > 
-> Torbjörn Reviewed in the United States on November 21, 2021
+> —Torbjörn Reviewed in the United States on November 21, 2021
 
 
 > ⭐️⭐️⭐️⭐️⭐️ Beyond expectations
@@ -60,12 +72,12 @@
 > 
 > Note: this is not a book which I would recommend as a first read about Kotlin. As the authors state themselves, they didn't mean to teach the language, but rather build on top of the basic knowledge that someone should gather somewhere else. Once you have a nice grasp of the syntax and basics, you are good to go with this book. 
 > 
-> Piotr Krzemiński Reviewed in Poland on December 3, 2021
+> —Piotr Krzemiński Reviewed in Poland on December 3, 2021
 
 
 > ⭐️⭐️⭐️⭐️⭐️ Effective Java for Kotlin
 >
 > This book is not for those new to Kotlin but it is probably the best book for learning how to write Koltin. Much of what was best practice in Java no longer applies in Kotlin because it doesn't have the heavy handed OOP restrictions on it that Java has and is more of a hybrid language allowing OOP, FP, and DOP to all merge. 
 >
-> Jswizzy Reviewed in the United States on December 12, 2021
+> —Jswizzy Reviewed in the United States on December 12, 2021
 

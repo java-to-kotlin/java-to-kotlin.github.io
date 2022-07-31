@@ -42,7 +42,19 @@
 > —safarileandrozis, May 15, 2021
 
 
-## On [Amazon](https://www.amazon.com/Java-Kotlin-Refactoring-Duncan-McGregor-dp-1492082279)
+## On [Amazon](https://www.amazon.com/Java-Kotlin-Duncan-McGregor-ebook/product-reviews/B09CT5KZLM/ref=cm_cr_dp_d_show_all_btm?ie=UTF8&reviewerType=all_reviews)
+
+> ⭐️⭐️⭐️⭐️⭐️ Do not fight the grain of the language!
+>
+> As the authors describe in the book, every language has its own grain and so does Kotlin. Kotlin although promoted as a better Java is so much more. It has its own grain, its own idioms.
+>
+> This is a book for all levels of developers that would like to try Kotlin and especially for people coming from Java.
+> Make no mistake though! This book has, also, its own grain and its not simply a java to kotlin book. You will delve into TDD, functional programming and a plethora of refactoring techniques that you will be able to use day in day out.
+>
+> Do not falter and buy this book as fast as possible!
+>
+> —George Reviewed in the United States on July 31, 2022
+
 
 > ⭐️⭐️⭐️⭐️⭐️ A great learning approach, insightful advice to adapting to Kotlin
 >

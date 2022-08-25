@@ -1,0 +1,20 @@
+---
+title: Samples
+layout: default
+---
+<h1>{{page.title}}</h1>
+
+<p>
+    Most chapters in the book have some discussion about how we might do things in Java, then how to achieve the
+    same in Kotlin, followed by an example of how to refactor to the Kotlin way of doing things.
+</p>
+
+<p>
+    Here we present some of the discussions. If you want the refactorings, then please <a href="/">buy the book</a>!
+</p>
+
+<ul>
+    {% for j in site.chapter_samples %}
+    <li><a href="{{j.url}}">{{j.title}}</a></li>
+    {% endfor %}
+</ul>

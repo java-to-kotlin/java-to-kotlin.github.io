@@ -35,3 +35,6 @@ collections:
   journeys:
     output: true
     layout: default
+  chapter_samples:
+    output: true
+    layout: default

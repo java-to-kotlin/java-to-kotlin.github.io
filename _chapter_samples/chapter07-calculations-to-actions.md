@@ -3,7 +3,7 @@ title: Sample Chapter 7 - Calculations and Actions
 layout: sample
 ---
 
-Neither Java nor Kotlin makes any formal distinction between imperative and functional code, although Kotlin’s emphasis on immutability and expressions generally leads to more functional programs. Can we improve our code by mak‐ ing more of it functional?
+Neither Java nor Kotlin makes any formal distinction between imperative and functional code, although Kotlin’s emphasis on immutability and expressions generally leads to more functional programs. Can we improve our code by making more of it functional?
 
 ## Functions
 

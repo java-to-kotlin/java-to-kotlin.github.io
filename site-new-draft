@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-f="_drafts/$(echo -n "$@" | tr -s '[:space:]' - | tr '[:upper:]' '[:lower:]').md"
+f="_drafts/$(echo -n "$@" | tr -s '[:space:]/' - | tr '[:upper:]' '[:lower:]').md"
 
 mkdir -p "$(dirname "$f")"
 echo "---

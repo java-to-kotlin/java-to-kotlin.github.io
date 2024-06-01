@@ -32,7 +32,7 @@ fun String.isValidCardNumber(): Boolean =
 
 This has two conditional statements, both of which can be replaced by straight-line integer calculations.
 
-However, although IntelliJ encodes some mathematical reasoning into its refactoring tools, particularly [De Morgan’s laws of boolean algebra](), it does not encode enough arithmetical rules to automatically replace conditional statements with numeric calculations. We have to rely on our own knowledge of arithmetic and the behaviour of Kotlin's integer arithmetic operators to recognise where and how we can replace conditionals with calculations.
+However, although IntelliJ encodes some mathematical reasoning into its refactoring tools, particularly [De Morgan’s laws of boolean algebra](https://en.m.wikipedia.org/wiki/De_Morgan%27s_laws), it does not encode enough arithmetical rules to automatically replace conditional statements with numeric calculations. We have to rely on our own knowledge of arithmetic and the behaviour of Kotlin's integer arithmetic operators to recognise where and how we can replace conditionals with calculations.
 
 To see how, let's start with the first when expression in the function:
 

@@ -4,7 +4,7 @@ title: Refactoring Beyond the Commit
 tags:
 ---
 
-In our "Mastering Kotlin Refactoring" workshop at KotlinConf 2024, we categorised refactorings by the effort involved to propagate the code improvements beyond your local workspace.  This resulted in three categories of refactoring, of increasing effort:
+In our "Mastering Kotlin Refactoring" workshop at KotlinConf 2024, we categorised refactorings by the effort involved to propagate the code improvements beyond your local workspace.  We came up with three categories of refactoring, of increasing effort:
 
 **Single Commit:** 
 
@@ -42,5 +42,5 @@ IntelliJ has excellent support for Single Commit refactorings.  It has _some_ su
 
 Kotlin's deprecation mechanism helps with _Multiple Commit_ refactorings.  You can annotate old features in the codebase as `@Deprecated` and provide the new form of the code in the annotation. Other developers can then migrate code to the new form automatically in the IDE when it is convenient for them to do so.  The `@Deprecated` annotation can also be used hide old forms from IDE autocompletion, preventing people using the old forms accidentally.  We'll look at these features in more detail in a future post.
 
-IntelliJ doesn't help at all with _Multiple Deployment_ refactorings.  But who knows, maybe in the future the IDE will integrate code editing with deployment orchestration tools, such as Flyway, Liquibase, Kubernetes, Helm, Monopolis, etc., and generate migrations and schedule deployments as you refactor.
+IntelliJ doesn't help at all with _Multiple Deployment_ refactorings.  But who knows, maybe in the future the IDE will integrate code editing with deployment orchestration tools, such as [Flyway](https://flywaydb.org/), [Liquibase](https://www.liquibase.com/), [Kubernetes](https://kubernetes.io/), [Helm](https://helm.sh/), [Monopolis](https://monopolis.cloud/), etc., and generate migrations and schedule deployments as you refactor.
 

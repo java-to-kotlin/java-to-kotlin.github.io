@@ -6,21 +6,21 @@ tags:
 
 In our "Mastering Kotlin Refactoring" workshop at KotlinConf 2024, we categorised refactorings by the effort involved to propagate the code improvements beyond your local workspace.  We came up with three categories of refactoring, of increasing effort:
 
-**Single Commit:** 
+**Single Commit Refactorings:** 
 
 * Affects a single codebase and built artefact.
 * Can be applied by one commit, without disrupting other team members.
 
 For example, renaming a local variable.
 
-**Multiple Commit:**
+**Multiple Commit Refactorings:**
 
 * Creates widespread change in a single codebase & built artefact.
 * Applied by a sequence of commits with expand/contract to reduce conflicts with other team members' work in progress.
 
 For example, renaming a widely used function, type or package. 
 
-**Multiple Deployment:**
+**Multiple Deployment Refactorings:**
 
 * Requires change in multiple codebases or deployed artefacts.
 * Applied by multiple deployments with expand/contract to avoid downtime.
@@ -30,7 +30,7 @@ For example, changes to HTTP APIs or database schema used by systems that must b
 
 ## Expand/Contract
 
-_Multiple Commit_ and _Multiple Deployment_ refactorings require changes to be made by "expand/contract", so that the refactoring does not disrupt the work of others or breaks the running system.  
+_Multiple Commit_ refactorings require changes to be made by "expand/contract", so that the refactoring does not disrupt work in progress by other developers in the team. _Multiple Deployment_ refactorings require changes to be made by "expand/contract" _deployments_ so that they do not break the running system.  
 
 Expand/contract delivers a refactoring in phases.  First, we "expand" the system, adding features to the codebase that allow both old and new forms of the code to coexist.  Then we migrate code that uses the old form to use the new form.  Finally, we "contract" the system, removing the now unused code that supports the old form.
 

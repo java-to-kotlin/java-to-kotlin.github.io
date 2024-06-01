@@ -1,8 +1,9 @@
 ---
-layout: post
 title: Replace Conditional With Calculation
-tags:
+published: false
+layout: default
 ---
+# {{ page.title }}
 
 Among the many refactorings described in Martin Fowler’s Refactoring, "Replace Conditional with Polymorphism" eliminates branching control flow by replacing it with polymorphic calls. An alternative is to replace branching code with straight-line calculations. This is frequently used in graphics and games programming. Unsurprisingly, I call this refactoring "Replace Conditional with Calculation".
 

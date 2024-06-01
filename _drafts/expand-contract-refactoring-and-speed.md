@@ -1,0 +1,2 @@
+For a _Multiple Commit_ refactoring, the time it takes to merge the change to trunk is a limiting factor. The longer it takes to get the change merged to trunk, the longer it will take for improvements to uplift the rest of the team. The most effective strategy for sharing refactorings is trunk-based development, but if using pull requests then keep the team needs to ensure that reviews are very fast, in minutes, and report on correctness, compliance and legal issues, not style preferences.
+

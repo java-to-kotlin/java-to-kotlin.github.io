@@ -8,21 +8,21 @@ In our "Mastering Kotlin Refactoring" workshop at KotlinConf 2024, we categorise
 
 **Single Commit Refactorings:** 
 
-* Affects a single codebase and built artefact.
+* Affect a single codebase and built artefact.
 * Can be applied by one commit, without disrupting other team members.
 
 For example, renaming a local variable.
 
 **Multiple Commit Refactorings:**
 
-* Creates widespread change in a single codebase & built artefact.
+* Create widespread change in a single codebase & built artefact.
 * Applied by a sequence of commits with expand/contract to reduce conflicts with other team members' work in progress.
 
 For example, renaming a widely used function, type or package. 
 
 **Multiple Deployment Refactorings:**
 
-* Requires change in multiple codebases or deployed artefacts.
+* Require changes in multiple codebases or deployed artefacts.
 * Applied by multiple deployments with expand/contract to avoid downtime.
 
 For example, changes to HTTP APIs or database schema used by systems that must be upgraded without downtime.

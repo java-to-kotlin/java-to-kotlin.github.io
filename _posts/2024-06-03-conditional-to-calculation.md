@@ -126,7 +126,7 @@ fun String.isValidCardNumber(): Boolean =
 
 The second conditional sums individual digits.
 Given the behaviour of Kotlin's integer arithmetic operators, the branching is unnecessary. 
-If the intermediate value, `it`, is less than ten, then `it/10` would be zero, and `it % 10` would be equal to `it`, meaning we can replace the entire when expression with `it / 10 + it % 10`, leaving the function as: 
+If the intermediate value, `it`, is less than ten, then `it / 10` would be zero, and `it % 10` would be equal to `it`, meaning we can replace the entire when expression with `it / 10 + it % 10`, leaving the function as: 
 
 ```kotlin
 fun String.isValidCardNumber(): Boolean =

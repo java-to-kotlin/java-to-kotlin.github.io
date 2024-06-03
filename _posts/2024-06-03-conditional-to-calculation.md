@@ -145,7 +145,7 @@ Just as you can refactor between conditionals and polymorphism in either directi
 
 ## Be Careful of Optimising When You Should Be Refactoring
 
-The `reversed()` call copies the string data, and mapIndexed creates a temporary `List<Int>`. We can use `foldIndexed` to eliminate these allocations, but the logic is then much harder to understand:
+The `reversed()` call copies the string data, and `mapIndexed` creates a temporary `List<Int>`. We can use `foldIndexed` to eliminate these allocations, but the logic is then much harder to understand:
 
 ```kotlin
 fun String.isValidCardNumber(): Boolean =

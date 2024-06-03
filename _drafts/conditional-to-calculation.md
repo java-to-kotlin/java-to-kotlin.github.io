@@ -5,7 +5,7 @@ layout: default
 ---
 # {{ page.title }}
 
-Among the many refactorings described in Martin Fowler’s Refactoring, "Replace Conditional with Polymorphism" eliminates branching control flow by replacing it with polymorphic calls. An alternative is to replace branching code with straight-line calculations. This is frequently used in graphics and games programming. Unsurprisingly, I call this refactoring "Replace Conditional with Calculation".
+The "Replace Conditional with Polymorphism" refactoring in [Martin Fowler's Refactoring book](https://refactoring.com) eliminates branching control flow by replacing it with polymorphic calls. Sometimes you can replace branching code with a straight-line calculation. This is frequently used in graphics and games programming. Unsurprisingly, I call this refactoring "Replace Conditional with Calculation".
 
 ## Worked Example
 
@@ -124,16 +124,9 @@ fun String.isValidCardNumber(): Boolean =
         .let { checkSum -> checkSum % 10 == 0 }
 ```
 
-The second conditional is an almost direct translation from a description of the Luhn algorithm into Kotlin: "if an intermediate value calculated from a digit of the card number has two digits, add the two digits together, otherwise use the digit". This calculation makes sense if calculating the checksum by pen and paper. But given the behaviour of Kotlin's integer arithmetic operators, the branching is unnecessary in the Kotlin code. If the intermediate value, `it`, is less than ten, then `it/10` would be zero, and `it % 10` would be equal to `it`, meaning we can use the same expression for both branches:
-
-```kotlin
-when {
-    it >= 10 -> it / 10 + it % 10
-    else     -> it / 10 + it % 10
-}
-```
-
-Therefore, we can replace the entire when expression with `it / 10 + it % 10`, leaving the function as: 
+The second conditional sums individual digits.
+Given the behaviour of Kotlin's integer arithmetic operators, the branching is unnecessary in the Kotlin code. 
+If the intermediate value, `it`, is less than ten, then `it/10` would be zero, and `it % 10` would be equal to `it`, meaning we can replace the entire when expression with `it / 10 + it % 10`, leaving the function as: 
 
 ```kotlin
 fun String.isValidCardNumber(): Boolean =
@@ -143,6 +136,27 @@ fun String.isValidCardNumber(): Boolean =
         .let { checkSum -> checkSum % 10 == 0 }
 ```
 
+
 ## Replace Calculation with Conditional
 
-The intent of a calculation can be harder to understand than of explicit conditional code. Just as you can refactor between conditionals and polymorphism in either direction, from conditionals to polymorphism or from polymorphism to conditionals, so you can refactor between conditionals and calculations.
+The intent of a calculation can be harder to understand than of explicit conditional code. 
+Just as you can refactor between conditionals and polymorphism in either direction, from conditionals to polymorphism or from polymorphism to conditionals, so you can refactor between conditionals and calculations.
+
+
+## Be Careful of Optimising When You Should Be Refactoring
+
+The `reversed()` call copies the string data, and mapIndexed creates a temporary `List<Int>`. We can use `foldIndexed` to eliminate these allocations, but the logic is then much harder to understand:
+
+```kotlin
+fun String.isValidCardNumber(): Boolean =
+    foldIndexed(0) { index, subtotal, ch -> 
+        subtotal + sumDigits(ch.digitToInt() * (2 - (length - index) % 2)) 
+    }
+    .let { checkSum -> checkSum % 10 == 0 }
+
+private fun sumDigits(i: Int): Int = i / 10 + i % 10
+```
+
+I have to keep in mind whether I am refactoring to make the logic easier to understand, or optimising for performance.
+I find it too easy to slip from one mode to the other.
+A second pair of eyes helps: my pair-programming partner would stop me long before I could commit impenetrable logic like this.

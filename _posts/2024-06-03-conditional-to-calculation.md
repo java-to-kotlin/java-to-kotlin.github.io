@@ -1,6 +1,6 @@
 ---
 title: Replace Conditional With Calculation
-published: false
+published: true
 layout: default
 ---
 # {{ page.title }}

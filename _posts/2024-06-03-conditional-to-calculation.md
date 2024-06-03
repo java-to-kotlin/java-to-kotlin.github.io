@@ -34,7 +34,7 @@ This has two conditional statements, both of which can be replaced by straight-l
 
 IntelliJ encodes some mathematical reasoning into its refactoring tools, particularly [De Morgan’s laws of boolean algebra](https://en.m.wikipedia.org/wiki/De_Morgan%27s_laws). However, it does not encode enough rules of arithmetic to automatically replace conditional statements with numeric calculations. We have to rely on our own knowledge of arithmetic and the behaviour of Kotlin's integer arithmetic operators to recognise where and how we can replace conditionals with calculations.
 
-To see how, let's start with the first when expression in the function:
+To see how, let's start with the first when expression in the function, and baby-step our way through the process of working out a calculation that can replace it:
 
 ```kotlin
 when (index % 2) {
